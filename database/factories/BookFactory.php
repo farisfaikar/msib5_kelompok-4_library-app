@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -9,15 +10,20 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class BookFactory extends Factory
 {
-  /**
-   * Define the model's default state.
-   *
-   * @return array<string, mixed>
-   */
-  public function definition(): array
-  {
-    return [
-        //
-      ];
-  }
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        return [
+            "uuid" => fake()->uuid(),
+            "category_uuid" => Category::inRandomOrder()->first()->uuid,
+            "title" => fake()->sentence(3),
+            "author" => fake()->name(),
+            "synopsis" => fake()->sentence(100),
+            "publisher" => fake()->sentence(5),
+        ];
+    }
 }
