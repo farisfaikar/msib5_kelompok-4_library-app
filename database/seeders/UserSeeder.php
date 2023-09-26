@@ -20,6 +20,8 @@ class UserSeeder extends Seeder
             "username" => "admin",
             "password" => bcrypt("password"),
             "role" => "admin",
+            "email_verified_at" => now(),
+            "remember_token" => Str::random(10),
         ]);
 
         User::factory(10)->create();

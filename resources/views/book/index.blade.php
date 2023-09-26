@@ -4,25 +4,33 @@
   <section>
     <h1>Book Index</h1>
     <p>Contains a list of books kept by the library.</p>
+    <a href="{{ route("book.create") }}">Add Book</a>
     <table>
       <tr>
-        <th>No.</th>
-        <th>Book Name</th>
+        <th>Title</th>
         <th>Author</th>
         <th>Synopsis</th>
         <th>Publisher</th>
         <th>Category</th>
         <th>Action</th>
       </tr>
+      @foreach ($books as $book)
       <tr>
-        <td>1</td>
-        <td>Harry Potter</td>
-        <td>J.K. Rowling</td>
-        <td>Wizard thingy idk</td>
-        <td>Some publisher.id</td>
-        <td>Fantasy</td>
-        <td><a href="{{ route('book.edit', 1) }}">Edit</a><a href="{{ route('book.destroy', 1) }}">Delete</a></td>
+        <td>{{ $book->title }}</td>
+        <td>{{ $book->author }}</td>
+        <td>{{ (strlen($book->synopsis) > 20) ? substr($book->synopsis, 0, 10) . '...' : $book->synopsis }}</td>
+        <td>{{ $book->publisher }}</td>
+        <td>{{ $book->category->category_name }}</td>
+        <td>
+          <a href="{{ route('book.edit', $book) }}">Edit</a>
+          <form action="{{ route('book.destroy', $book) }}" method="post">
+            @csrf
+            @method('delete')
+            <button type="submit">Delete</button>
+          </form>
+        </td>
       </tr>
+      @endforeach
     </table>
   </section>
 @endsection

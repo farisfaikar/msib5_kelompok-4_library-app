@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -9,7 +9,7 @@
   <title>{{ $title }}</title>
 </head>
 
-<body class="dark:bg-gray-900 dark:text-white">
+<body>
   <header>
     @include('components.navbar')
   </header>
