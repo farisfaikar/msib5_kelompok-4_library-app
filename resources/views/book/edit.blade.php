@@ -24,7 +24,7 @@
       </div>
       <div>
         <label for="inputCategory">Category</label>
-        <select name="category_uuid" id="inputCategory">
+        <select name="category_uuid" id="inputCategory" required>
           <option value="" disabled>-- Choose Category --</option>
           @foreach ($categories as $category)
             <option value="{{ $category->uuid }}" {{ $category->uuid === $book->category_uuid ? 'selected' : '' }}>{{ $category->category_name }}</option>

@@ -23,7 +23,7 @@
       </div>
       <div>
         <label for="inputCategory">Category</label>
-        <select name="category_uuid" id="inputCategory">
+        <select name="category_uuid" id="inputCategory" required>
           <option value="" disabled selected>-- Choose Category --</option>
           @foreach ($categories as $category)
             <option value="{{ $category->uuid }}">{{ $category->category_name }}</option>
