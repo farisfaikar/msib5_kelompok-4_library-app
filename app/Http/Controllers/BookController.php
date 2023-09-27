@@ -12,7 +12,7 @@ class BookController extends Controller
 {
     protected $book;
     protected $category;
-    
+
     public function __construct(Book $book, Category $category)
     {
         $this->book = $book;
@@ -47,14 +47,14 @@ class BookController extends Controller
         $input = $request->all();
         $book = new Book();
         $book->uuid = Str::uuid();
-        $book->title = $input['title'];
-        $book->author = $input['author'];
-        $book->synopsis = $input['synopsis'];
-        $book->publisher = $input['publisher'];
-        $book->category_uuid = $input['category_uuid'];
+        $book->title = $input["title"];
+        $book->author = $input["author"];
+        $book->synopsis = $input["synopsis"];
+        $book->publisher = $input["publisher"];
+        $book->category_uuid = $input["category_uuid"];
         $book->save();
 
-        return redirect()->route('book.index');
+        return redirect()->route("book.index");
     }
 
     /**
@@ -83,11 +83,11 @@ class BookController extends Controller
     {
         $input = $request->all();
         $book = $this->book->find($book->uuid);
-        $book->title = $input['title'];
-        $book->author = $input['author'];
-        $book->synopsis = $input['synopsis'];
-        $book->publisher = $input['publisher'];
-        $book->category_uuid = $input['category_uuid'];
+        $book->title = $input["title"];
+        $book->author = $input["author"];
+        $book->synopsis = $input["synopsis"];
+        $book->publisher = $input["publisher"];
+        $book->category_uuid = $input["category_uuid"];
         $book->save();
 
         return redirect()->route("book.index");
@@ -101,6 +101,6 @@ class BookController extends Controller
         $book = $this->book->find($book->uuid);
         $book->delete();
 
-        return redirect()->route('book.index');
+        return redirect()->route("book.index");
     }
 }
