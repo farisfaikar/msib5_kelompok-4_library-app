@@ -14,45 +14,25 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Fantasy",
-        ]);
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Thriller",
-        ]);
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Drama",
-        ]);
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Romance",
-        ]);
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Fiction",
-        ]);
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Horror",
-        ]);
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Autobiography",
-        ]);
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Mystery",
-        ]);
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Action",
-        ]);
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Humor",
-        ]);
+        // prettier-ignore
+        $category_names = [
+            "Fantasy",
+            "Thriller",
+            "Drama",
+            "Romance",
+            "Fiction",
+            "Horror",
+            "Autobiography",
+            "Mystery",
+            "Action",
+            "Humor",
+        ];
+
+        foreach ($category_names as $category_name) {
+            Category::create([
+                "uuid" => Str::orderedUuid(),
+                "category_name" => $category_name,
+            ]);
+        }
     }
 }
