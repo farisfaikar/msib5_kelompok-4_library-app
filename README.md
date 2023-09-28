@@ -4,9 +4,8 @@
 <h1 align="center">Readiverse</h1>
 
 <p align="center">
-<a href="https://github.com/farisfaikar/mbah-jiwo"><img src="https://img.shields.io/github/stars/farisfaikar/mbah-jiwo.svg?style=social" alt="Stars"></a>
-<img src="https://komarev.com/ghpvc/?username=farisfaikar&repo=mbah-jiwo&label=Repository%20views&color=0e75b6&style=flat" alt="Repository Views">
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<a href="https://github.com/farisfaikar/readiverse"><img src="https://img.shields.io/github/stars/farisfaikar/readiverse.svg?style=social" alt="Stars"></a>
+<img src="https://komarev.com/ghpvc/?username=farisfaikar&repo=readiverse&label=Repository%20views&readiverselor=0e75b6&style=flat" alt="Repository Views">
 </p>
 
 # Description.
