@@ -8,12 +8,21 @@ use App\Http\Requests\UpdateCategoryRequest;
 
 class CategoryController extends Controller
 {
+    protected $category;
+    
+    public function __construct(Category $category)
+    {
+        $this->category = $category;
+    }
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        $title = "Readiverse | Categories";
+        $categories = $this->category->all();
+        return view("category.index", compact("title", "categories"));
     }
 
     /**

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -15,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/", [HomeController::class, 'index'])->name("home");
+Route::get("/", [HomeController::class, "index"])->name("home");
 Route::resource("/book", BookController::class);
+Route::resource("/category", CategoryController::class);

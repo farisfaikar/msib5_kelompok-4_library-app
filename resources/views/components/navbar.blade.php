@@ -6,6 +6,7 @@
       </label>
       <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <li><a href="{{ route("book.index") }}">Browse Books</a></li>
+        <li><a href="{{ route("category.index") }}">Categories</a></li>
       </ul>
     </div>
     <a href="{{ route("home") }}" class="btn btn-ghost normal-case text-xl px-0">
@@ -14,6 +15,7 @@
     </a>
   </div>
   <div class="navbar-end">
+    <a class="link link-hover mr-5 hidden lg:flex" href="{{ route("category.index") }}">Categories</a>
     <a class="link link-hover mr-5 hidden lg:flex" href="{{ route("book.index") }}">Browse Books</a>
     <a class="btn btn-outline btn-neutral">Login</a>
   </div>

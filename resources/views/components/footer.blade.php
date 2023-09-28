@@ -2,7 +2,7 @@
   <nav>
     <header class="footer-title">Services</header> 
     <a href="{{ route("book.index") }}" class="link link-hover">Browse Books</a> 
-    <a class="link link-hover">Design</a> 
+    <a href="{{ route("category.index") }}" class="link link-hover">Categories</a> 
     <a class="link link-hover">Marketing</a> 
     <a class="link link-hover">Advertisement</a>
   </nav> 
