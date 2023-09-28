@@ -24,7 +24,7 @@ class BookController extends Controller
      */
     public function index()
     {
-        $title = "Library App | Book Index";
+        $title = "Readiverse | Books";
         $books = $this->book->all();
         return view("book.index", compact("title", "books"));
     }
@@ -34,7 +34,7 @@ class BookController extends Controller
      */
     public function create()
     {
-        $title = "Library App | Create Book";
+        $title = "Readiverse | Add Book";
         $categories = $this->category->all();
         return view("book.create", compact("title", "categories"));
     }
@@ -70,7 +70,7 @@ class BookController extends Controller
      */
     public function edit(Book $book)
     {
-        $title = "Library App | Edit Book";
+        $title = "Readiverse | Edit Book";
         $book = $this->book->find($book->uuid);
         $categories = $this->category->all();
         return view("book.edit", compact("title", "book", "categories"));

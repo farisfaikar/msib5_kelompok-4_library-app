@@ -20,10 +20,10 @@ class BookFactory extends Factory
         return [
             "uuid" => fake()->uuid(),
             "category_uuid" => Category::inRandomOrder()->first()->uuid,
-            "title" => fake()->sentence(3),
+            "title" => fake()->realTextBetween(10, 50),
             "author" => fake()->name(),
-            "synopsis" => fake()->sentence(100),
-            "publisher" => fake()->sentence(5),
+            "synopsis" => fake()->realTextBetween(20, 500),
+            "publisher" => fake()->company(),
         ];
     }
 }
