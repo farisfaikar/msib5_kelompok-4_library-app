@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="">
 
 <head>
   <meta charset="UTF-8">
@@ -10,9 +10,7 @@
 </head>
 
 <body>
-  <header>
-    @include('components.navbar')
-  </header>
+  <x-navbar/>
 
   <main>
     @yield('container')
