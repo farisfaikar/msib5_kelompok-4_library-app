@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Str;
 
 return new class extends Migration {
     /**
@@ -12,7 +13,7 @@ return new class extends Migration {
     {
         Schema::create("books", function (Blueprint $table) {
             // prettier-ignore
-            $table->uuid()->primary()->unique();
+            $table->uuid()->primary()->unique()->default(Str::uuid());
             // prettier-ignore
             $table->foreignUuid("category_uuid")->constrained("categories", "uuid")->cascadeOnDelete()->cascadeOnUpdate();
             $table->string("title");

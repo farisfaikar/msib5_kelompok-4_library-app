@@ -19,7 +19,7 @@ class UserFactory extends Factory
     {
         return [
             "uuid" => fake()->uuid(),
-            "username" => fake()->userName(),
+            "name" => fake()->name(),
             // prettier-ignore
             "email" => fake()->unique()->safeEmail(),
             "role" => fake()->randomElement(["admin", "client"]),

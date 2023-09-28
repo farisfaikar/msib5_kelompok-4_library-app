@@ -16,8 +16,8 @@ class UserSeeder extends Seeder
     {
         User::create([
             "uuid" => Str::orderedUuid(),
+            "name" => "Admin Doe",
             "email" => "admin@mail.com",
-            "username" => "admin",
             "password" => bcrypt("password"),
             "role" => "admin",
             "email_verified_at" => now(),
