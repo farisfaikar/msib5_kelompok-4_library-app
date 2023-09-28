@@ -3,12 +3,12 @@
 @section('container')
 
 <section class="py-4 sm:px-10 px-4 bg-base-200">
-  <div class="flex flex-col sm:flex-row justify-between">
+  <div class="flex flex-col md:flex-row justify-between">
     <div>
       <h1 class="text-3xl font-black">Categories</h1>
       <p class="text-lg">Contains a list of book categories.</p>
     </div>
-    <a id="category-form-add" class="btn btn-primary mt-4 sm:w-auto sm:flex"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Category</a>
+    <a id="category-form-add" class="btn btn-primary mt-4 md:w-auto"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg> Add Category</a>
   </div>
 
   <div id="category-form" class="hidden p-4 bg-base-100 rounded-lg mt-4">

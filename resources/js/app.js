@@ -7,9 +7,8 @@ const inputColor = document.getElementById("input-color");
 const randomizeColorButton = document.getElementById("randomize-color-button");
 const categoryPreview = document.getElementById("category-preview");
 
-
-function displayForm() {
-  categoryForm.classList.remove("hidden");
+function toggleForm() {
+  categoryForm.classList.toggle("hidden");
 }
 
 function closeForm() {
@@ -36,7 +35,7 @@ function setCategoryPreviewColor() {
 
 randomizeColor();
 setCategoryPreviewColor();
-categoryFormAdd.addEventListener("click", displayForm);
+categoryFormAdd.addEventListener("click", toggleForm);
 categoryFormCancel.addEventListener("click", closeForm);
 inputColor.addEventListener("change", setCategoryPreviewColor);
 randomizeColorButton.addEventListener("click", randomizeColor);
