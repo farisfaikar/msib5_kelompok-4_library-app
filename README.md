@@ -34,6 +34,50 @@ The technology used to develop this application are as follows:
 - Testing: PHPunit
 - Code Styling: Prettier
 
+## Installation (For Developers)
+
+Web-i-secret Laravel Project Installation Tutorial:
+
+1. Install PHP 8.2, XAMPP, Composer, Laravel 10.
+
+2. Add the following extension to the php.ini file (usually found in C:\php\php.ini, depending on the PHP installation location). Write the following extension in the php.ini file then save:
+```
+extension=curl
+extension=fileinfo
+extension=openssl
+extension=zip
+extension=pdo_mysql ; for MySQL driver
+extension=mbstring ; for seeder
+extension=gd ; for image()
+curl.cainfo="C:\xampp\php\extras\ssl\cacert.pem" ; for image(), first download the file cacert.pem
+zend_extension=xdebug ; for unit and feature testing (if using windows xdebug installation can be through the following link: https://xdebug.org/wizard)
+xdebug.mode=coverage ; for unit and feature testing
+```
+3. Copy and paste the .env-example file in the Laravel web-i-secret project folder in the same folder, and change the file name to `.env`.
+
+4. Create a new APP_KEY in the `.env` file by running php artisan key:generate in the Laravel readiverse project folder.
+
+5. Run composer install in the Laravel readiverse project folder. (This step is the most likely to get an error. If it does, it means there was a problem adding the extension in step 2).
+
+6. Create a new database manually in phpMyAdmin with the name `readiverse`. Edit `DB_DATABASE=readiverse` in the `.env` file.
+
+7. Run `php artisan migrate:fresh --seed` to populate the database with data.
+
+8. Run php artisan serve and try to open localhost link (http://127.0.0.1:8000).
+
+9. The website is accessible.
+
+## Default Credentials
+- Email: admin@mail.com
+- Password: password
+
+## GitHub Workflow (Trunk Based Development)
+1. Create a new branch (example branch name: faris.backend_book-crud)
+2. Add changes to the code in that branch
+3. Create a Pull Request
+4. Pull Request is tested by GitHub Actions (build, test, deploy)
+5. Pull Request merged repo owner (branch: main)
+
 ### Code of Conduct
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
