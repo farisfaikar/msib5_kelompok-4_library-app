@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+
+<script>
+  function initTheme() {
+    if (localStorage.getItem("theme") === "night") {
+      document.documentElement.setAttribute("data-theme", "night");
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+    }
+  }
+  initTheme();
+</script>
+
 <html lang="en" data-theme="night">
 
 <head>
