@@ -14,6 +14,8 @@ return new class extends Migration {
             // prettier-ignore
             $table->uuid()->primary()->unique();
             $table->string("category_name");
+            $table->string("color");
+            $table->string("description");
             $table->timestamps();
         });
     }

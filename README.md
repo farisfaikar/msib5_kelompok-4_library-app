@@ -1,66 +1,87 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://readiverse.com" target="_blank">
+    <img src="https://raw.githubusercontent.com/farisfaikar/readiverse/main/public/img/readiverse-logo-blue.png" width="100" alt="Readiverse Logo">
+</a></p>
+<h1 align="center">Readiverse</h1>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<a href="https://github.com/farisfaikar/readiverse"><img src="https://img.shields.io/github/stars/farisfaikar/readiverse.svg?style=social" alt="Stars"></a>
+<img src="https://komarev.com/ghpvc/?username=farisfaikar&repo=readiverse&label=Repository%20views&readiverselor=0e75b6&style=flat" alt="Repository Views">
 </p>
 
-## About Laravel
+# Description.
+The application we developed is a library application where users can borrow books from the library online with a maximum duration of one week. Users who have admin status can add, edit, and delete book data contained in the application database.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Features
+Below are the features of this website.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Client:
+  
+Clients can browse the list of books in the application. Clients can register themselves into the application by signing in/registering manually or using Google SSO. After that, the client can borrow books with a predetermined duration (maximum 1 week) and if the user fails to return the book within the specified time period, the application will automatically calculate the fine imposed on the client. The client is not allowed to borrow books if the fine has not been paid. If the client loses the book, the client must pay compensation at the full price of the book.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Admin:
 
-## Learning Laravel
+Admin can add, edit, and delete book data in the database. Admin can add, edit, and delete category data in the database.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# Technology
+The technology used to develop this application are as follows:
+- Fullstack: Laravel
+- Frontend: Tailwind CSS, Blade, DaisyUI
+- Database: MySQL
+- Authentication: Laravel/Breeze
+- VCS: Git, GitHub
+- VPS: [To be determined]
+- Collaborative: Eraser, Trello
+- Testing: PHPunit
+- Code Styling: Prettier
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## Installation (For Developers)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Web-i-secret Laravel Project Installation Tutorial:
 
-## Laravel Sponsors
+1. Install PHP 8.2, XAMPP, Composer, Laravel 10.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+2. Add the following extension to the php.ini file (usually found in C:\php\php.ini, depending on the PHP installation location). Write the following extension in the php.ini file then save:
+```
+extension=curl
+extension=fileinfo
+extension=openssl
+extension=zip
+extension=pdo_mysql ; for MySQL driver
+extension=mbstring ; for seeder
+extension=gd ; for image()
+curl.cainfo="C:\xampp\php\extras\ssl\cacert.pem" ; for image(), first download the file cacert.pem
+zend_extension=xdebug ; for unit and feature testing (if using windows xdebug installation can be through the following link: https://xdebug.org/wizard)
+xdebug.mode=coverage ; for unit and feature testing
+```
+3. Copy and paste the .env-example file in the Laravel web-i-secret project folder in the same folder, and change the file name to `.env`.
 
-### Premium Partners
+4. Create a new APP_KEY in the `.env` file by running php artisan key:generate in the Laravel readiverse project folder.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+5. Run composer install in the Laravel readiverse project folder. (This step is the most likely to get an error. If it does, it means there was a problem adding the extension in step 2).
 
-## Contributing
+6. Create a new database manually in phpMyAdmin with the name `readiverse`. Edit `DB_DATABASE=readiverse` in the `.env` file.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+7. Run `php artisan migrate:fresh --seed` to populate the database with data.
 
-## Code of Conduct
+8. Run php artisan serve and try to open localhost link (http://127.0.0.1:8000).
+
+9. The website is accessible.
+
+## Default Credentials
+- Email: admin@mail.com
+- Password: password
+
+## GitHub Workflow (Trunk Based Development)
+1. Create a new branch (example branch name: faris.backend_book-crud)
+2. Add changes to the code in that branch
+3. Create a Pull Request
+4. Pull Request is tested by GitHub Actions (build, test, deploy)
+5. Pull Request merged repo owner (branch: main)
+
+### Code of Conduct
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
+### License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

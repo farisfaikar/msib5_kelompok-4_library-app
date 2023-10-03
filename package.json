@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "format": "prettier --write resources/**/*.blade.php",
-    "serve": "php artisan serve --host=library-app.test --port=8083"
+    "serve": "php artisan serve --host=readiverse.test --port=8083"
   },
   "devDependencies": {
     "@shufo/prettier-plugin-blade": "^1.11.1",

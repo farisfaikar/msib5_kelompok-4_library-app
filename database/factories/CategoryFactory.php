@@ -19,6 +19,8 @@ class CategoryFactory extends Factory
         return [
             "uuid" => fake()->uuid(),
             "category_name" => fake()->word(),
+            "color" => fake()->hexColor(),
+            "description" => fake()->realText(10),
         ];
     }
 }

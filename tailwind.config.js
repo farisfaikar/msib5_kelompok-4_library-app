@@ -30,4 +30,11 @@ export default {
   daisyui: {
     themes: ["light", "night"],
   },
+<<<<<<< HEAD
+=======
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["night"],
+  },
+>>>>>>> 2555e953fa9f22c7065de8b34eb611c6327a73ba
 };

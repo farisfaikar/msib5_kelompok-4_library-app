@@ -14,25 +14,46 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        // prettier-ignore
-        $category_names = [
-            "Fantasy",
-            "Thriller",
-            "Drama",
-            "Romance",
-            "Fiction",
-            "Horror",
-            "Autobiography",
-            "Mystery",
-            "Action",
-            "Humor",
-        ];
+        Category::create([
+            "uuid" => Str::orderedUuid(),
+            "category_name" => "Fiction",
+            "color" => fake()->hexColor(),
+            "description" => "A versatile genre that explores various aspects of human existence, often blurring the line between reality and imagination.",
+        ]);
 
-        foreach ($category_names as $category_name) {
-            Category::create([
-                "uuid" => Str::orderedUuid(),
-                "category_name" => $category_name,
-            ]);
-        }
+        Category::create([
+            "uuid" => Str::orderedUuid(),
+            "category_name" => "Horror",
+            "color" => fake()->hexColor(),
+            "description" => "Chilling tales that evoke fear and dread, often featuring supernatural elements and gruesome encounters.",
+        ]);
+
+        Category::create([
+            "uuid" => Str::orderedUuid(),
+            "category_name" => "Autobiography",
+            "color" => fake()->hexColor(),
+            "description" => "Real-life stories told firsthand, offering insight into the lives and experiences of individuals.",
+        ]);
+
+        Category::create([
+            "uuid" => Str::orderedUuid(),
+            "category_name" => "Mystery",
+            "color" => fake()->hexColor(),
+            "description" => "Puzzling narratives filled with enigmatic clues, challenging readers to uncover the truth.",
+        ]);
+
+        Category::create([
+            "uuid" => Str::orderedUuid(),
+            "category_name" => "Action",
+            "color" => fake()->hexColor(),
+            "description" => "High-octane adventures featuring intense physical and often thrilling combat sequences.",
+        ]);
+
+        Category::create([
+            "uuid" => Str::orderedUuid(),
+            "category_name" => "Humor",
+            "color" => fake()->hexColor(),
+            "description" => "Laughter-inducing tales that playfully explore the lighter side of life, often through witty humor and satire.",
+        ]);
     }
 }

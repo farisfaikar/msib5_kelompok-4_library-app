@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
   function index()
   {
-    $title = "Library App | Home";
+    $title = "Readiverse | Home";
     return view("home", compact("title"));
   }
 }
