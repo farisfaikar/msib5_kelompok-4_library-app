@@ -1,4 +1,5 @@
 import "./bootstrap";
+import { themeChange } from "theme-change";
 
 const categoryForm = document.getElementById("category-form");
 const categoryFormAdd = document.getElementById("category-form-add");
@@ -15,10 +16,6 @@ function closeForm() {
   categoryForm.classList.add("hidden");
 }
 
-function forceHash() {
-  inputColor.innerHTML = `#${inputColor.value}`;
-}
-
 function randomizeColor() {
   const letters = "0123456789ABCDEF";
   let color = "#";
@@ -33,8 +30,12 @@ function setCategoryPreviewColor() {
   categoryPreview.style.backgroundColor = inputColor.value;
 }
 
+// Functions
+themeChange();
 randomizeColor();
 setCategoryPreviewColor();
+
+// Event listeners
 categoryFormAdd.addEventListener("click", toggleForm);
 categoryFormCancel.addEventListener("click", closeForm);
 inputColor.addEventListener("change", setCategoryPreviewColor);

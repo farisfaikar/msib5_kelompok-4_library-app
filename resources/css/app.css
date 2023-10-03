@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-[data-theme="night"] .btn {
-  text-transform: capitalize; 
+.btn {
+  text-transform: capitalize;
 }
 
 #input-color {
@@ -16,11 +16,13 @@
   border: none;
   cursor: pointer;
 }
+
 #input-color::-webkit-color-swatch {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: none;
 }
+
 #input-color::-moz-color-swatch {
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: none;
 }
