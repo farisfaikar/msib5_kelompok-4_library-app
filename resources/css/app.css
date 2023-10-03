@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+<<<<<<< HEAD
+/* Add More Plus Jakarta */
+@layer base {
+    @font-face {
+        font-family: 'Jakarta Sans';
+        src: url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap');
+    }
+=======
 [data-theme="night"] .btn {
   text-transform: capitalize; 
 }
@@ -23,4 +31,5 @@
 #input-color::-moz-color-swatch {
   border-radius: .5rem;
   border: none;
+>>>>>>> 2555e953fa9f22c7065de8b34eb611c6327a73ba
 }
