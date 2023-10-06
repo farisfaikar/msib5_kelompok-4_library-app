@@ -31,15 +31,15 @@ Admin can add, edit, and delete book data in the database. Admin can add, edit, 
 
 The technology used to develop this application are as follows:
 
-- Fullstack: Laravel
-- Frontend: Tailwind CSS, Blade, DaisyUI
-- Database: MySQL
-- Authentication: Laravel/Breeze
-- VCS: Git, GitHub
-- VPS: [To be determined]
-- Collaborative: Eraser, Trello
-- Testing: PHPunit
-- Code Styling: Prettier
+-   Fullstack: Laravel
+-   Frontend: Tailwind CSS, Blade, DaisyUI
+-   Database: MySQL
+-   Authentication: Laravel/Breeze
+-   VCS: Git, GitHub
+-   VPS: [To be determined]
+-   Collaborative: Eraser, Trello
+-   Testing: PHPunit
+-   Code Styling: Prettier
 
 ## Installation (For Developers)
 
@@ -78,8 +78,8 @@ xdebug.mode=coverage ; for unit and feature testing
 
 ## Default Credentials
 
-- Email: admin@mail.com
-- Password: password
+-   Email: admin@mail.com
+-   Password: password
 
 ## GitHub Workflow (Trunk Based Development)
 

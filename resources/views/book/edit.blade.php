@@ -1,13 +1,13 @@
 @extends('layouts.main')
 
 @section('container')
-  <section class="sm:px-10 p-4">
+  <section class="p-4 sm:px-10">
     <div class="rounded-lg bg-base-100 p-4">
       <h1 class="text-3xl font-black">Edit Book</h1>
-      <form action="{{ route("book.update", $book) }}" method="post" class="mt-4 space-y-4">
+      <form action="{{ route('book.update', $book) }}" method="post" class="mt-4 space-y-4">
         @method('put')
         @csrf
-        
+
         <div class="form-control w-full">
           <label class="label">
             <span class="label-text">Title</span>
@@ -26,7 +26,7 @@
           <label class="label">
             <span class="label-text">Synopsis</span>
           </label>
-          <textarea rows="4" class="textarea textarea-bordered text-base bg-base-200" name="synopsis" required>{{ $book->synopsis }}</textarea>
+          <textarea rows="4" class="textarea textarea-bordered bg-base-200 text-base" name="synopsis" required>{{ $book->synopsis }}</textarea>
         </div>
 
         <div class="form-control w-full">
@@ -35,7 +35,7 @@
           </label>
           <input type="text" name="publisher" value="{{ $book->publisher }}" class="input input-bordered w-full bg-base-200" required />
         </div>
-        
+
         <div class="form-control w-full">
           <label class="label">
             <span class="label-text">Category</span>
@@ -50,9 +50,8 @@
 
         <div class="flex flex-col md:flex-row">
           <button type="submit" class="btn btn-primary mt-2 w-full md:w-24">Submit</button>
-          <a href="{{ route("book.index") }}" class="btn btn-ghost mt-4 md:mt-2 w-full md:ml-4 md:w-24">Back</a>
+          <a href="{{ route('book.index') }}" class="btn btn-ghost mt-4 w-full md:ml-4 md:mt-2 md:w-24">Back</a>
         </div>
       </form>
-    </div
-  </section>
-@endsection
+    </div </section>
+  @endsection
