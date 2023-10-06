@@ -43,7 +43,7 @@ The technology used to develop this application are as follows:
 
 ## Installation (For Developers)
 
-Web-i-secret Laravel Project Installation Tutorial:
+readiverse Laravel Project Installation Tutorial:
 
 1. Install PHP 8.2, XAMPP, Composer, Laravel 10.
 
@@ -62,7 +62,7 @@ zend_extension=xdebug ; for unit and feature testing (if using windows xdebug in
 xdebug.mode=coverage ; for unit and feature testing
 ```
 
-3. Copy and paste the .env-example file in the Laravel web-i-secret project folder in the same folder, and change the file name to `.env`.
+3. Copy and paste the .env-example file in the Laravel readiverse project folder in the same folder, and change the file name to `.env`.
 
 4. Create a new APP_KEY in the `.env` file by running php artisan key:generate in the Laravel readiverse project folder.
 
