@@ -43,7 +43,7 @@ The technology used to develop this application are as follows:
 
 ## Installation (For Developers)
 
-readiverse Laravel Project Installation Tutorial:
+Readiverse Laravel Project Installation Tutorial:
 
 1. Install PHP 8.2, XAMPP, Composer, Laravel 10.
 
