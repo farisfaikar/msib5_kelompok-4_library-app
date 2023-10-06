@@ -14,46 +14,68 @@ class CategorySeeder extends Seeder
      */
     public function run(): void
     {
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Fiction",
-            "color" => fake()->hexColor(),
-            "description" => "A versatile genre that explores various aspects of human existence, often blurring the line between reality and imagination.",
-        ]);
+        $categoriesData = [
+            [
+                "category_name" => "Fiction",
+                "description" => "A versatile genre that explores various aspects of human existence, often blurring the line between reality and imagination.",
+            ],
+            [
+                "category_name" => "Horror",
+                "description" => "Chilling tales that evoke fear and dread, often featuring supernatural elements and gruesome encounters.",
+            ],
+            [
+                "category_name" => "Autobiography",
+                "description" => "Real-life stories told firsthand, offering insight into the lives and experiences of individuals.",
+            ],
+            [
+                "category_name" => "Mystery",
+                "description" => "Puzzling narratives filled with enigmatic clues, challenging readers to uncover the truth.",
+            ],
+            [
+                "category_name" => "Action",
+                "description" => "High-octane adventures featuring intense physical and often thrilling combat sequences.",
+            ],
+            [
+                "category_name" => "Humor",
+                "description" => "Laughter-inducing tales that playfully explore the lighter side of life, often through witty humor and satire.",
+            ],
+            [
+                "category_name" => "Romance",
+                "description" => "High-spirited romance novels featuring a deep love for one another and a sense of belonging.",
+            ],
+            [
+                "category_name" => "Thriller",
+                "description" => "Thrilling stories that explore the darker side of life, often with darker forces and darker emotions.",
+            ],
+            [
+                "category_name" => "Biography",
+                "description" => "Real-life stories told firsthand, offering insight into the lives and experiences of individuals.",
+            ],
+            [
+                "category_name" => "Sci-Fi",
+                "description" => "Science-fiction novels that explore the future and the unknown.",
+            ],
+            [
+                "category_name" => "History",
+                "description" => "Travel stories that explore the past and present, often with a focus on historical events and people.",
+            ],
+            [
+                "category_name" => "Poetry",
+                "description" => "Poems that explore the world and its people, often with a focus on the feelings and emotions of people.",
+            ],
+            [
+                "category_name" => "Fantasy",
+                "description" => "Fantasy novels that explore the world and its people, often with a focus on the feelings and emotions of people.",
+            ],
+        ];
 
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Horror",
-            "color" => fake()->hexColor(),
-            "description" => "Chilling tales that evoke fear and dread, often featuring supernatural elements and gruesome encounters.",
-        ]);
-
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Autobiography",
-            "color" => fake()->hexColor(),
-            "description" => "Real-life stories told firsthand, offering insight into the lives and experiences of individuals.",
-        ]);
-
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Mystery",
-            "color" => fake()->hexColor(),
-            "description" => "Puzzling narratives filled with enigmatic clues, challenging readers to uncover the truth.",
-        ]);
-
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Action",
-            "color" => fake()->hexColor(),
-            "description" => "High-octane adventures featuring intense physical and often thrilling combat sequences.",
-        ]);
-
-        Category::create([
-            "uuid" => Str::orderedUuid(),
-            "category_name" => "Humor",
-            "color" => fake()->hexColor(),
-            "description" => "Laughter-inducing tales that playfully explore the lighter side of life, often through witty humor and satire.",
-        ]);
+        foreach ($categoriesData as $categoryData) {
+            Category::create([
+                "uuid" => Str::orderedUuid(),
+                "category_name" => $categoryData["category_name"],
+                "color" => fake()->hexColor(),
+                "description" => $categoryData["description"],
+            ]);
+        }
     }
 }

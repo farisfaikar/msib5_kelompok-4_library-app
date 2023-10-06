@@ -9,25 +9,25 @@ const randomizeColorButton = document.getElementById("randomize-color-button");
 const categoryPreview = document.getElementById("category-preview");
 
 function toggleForm() {
-  categoryForm.classList.toggle("hidden");
+    categoryForm.classList.toggle("hidden");
 }
 
 function closeForm() {
-  categoryForm.classList.add("hidden");
+    categoryForm.classList.add("hidden");
 }
 
 function randomizeColor() {
-  const letters = "0123456789ABCDEF";
-  let color = "#";
-  for (let i = 0; i < 6; i++) {
-    color += letters[Math.floor(Math.random() * 16)];
-  }
-  inputColor.value = color;
-  setCategoryPreviewColor();
+    const letters = "0123456789ABCDEF";
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    inputColor.value = color;
+    setCategoryPreviewColor();
 }
 
 function setCategoryPreviewColor() {
-  categoryPreview.style.backgroundColor = inputColor.value;
+    categoryPreview.style.backgroundColor = inputColor.value;
 }
 
 // Functions

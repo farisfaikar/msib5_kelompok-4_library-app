@@ -1,11 +1,11 @@
 @extends('layouts.main')
 
 @section('container')
-  <section class="sm:px-10 p-4">
+  <section class="p-4 sm:px-10">
     <h1 class="text-3xl font-black">Add Category</h1>
-    <form action="{{ route("book.store") }}" method="post" class="mt-4 space-y-4">
+    <form action="{{ route('book.store') }}" method="post" class="mt-4 space-y-4">
       @csrf
-      
+
       <div class="form-control w-full">
         <label class="label">
           <span class="label-text">Category Name</span>
@@ -33,7 +33,7 @@
         </label>
         <input type="text" name="publisher" placeholder="Enter book publisher here." class="input input-bordered w-full" required />
       </div>
-      
+
       <div class="form-control w-full">
         <label class="label">
           <span class="label-text">Category</span>
@@ -48,7 +48,7 @@
 
       <div class="flex flex-col sm:flex-row">
         <button type="submit" class="btn btn-primary mt-2 w-full sm:w-24">Submit</button>
-        <a href="{{ route("book.index") }}" class="btn btn-ghost mt-4 sm:mt-2 w-full sm:ml-4 sm:w-24">Back</a>
+        <a href="{{ route('book.index') }}" class="btn btn-ghost mt-4 w-full sm:ml-4 sm:mt-2 sm:w-24">Back</a>
       </div>
     </form>
   </section>

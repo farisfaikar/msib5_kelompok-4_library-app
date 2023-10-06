@@ -1,22 +1,14 @@
 {
-  "plugins": ["@shufo/prettier-plugin-blade", "@prettier/plugin-php"],
-  "overrides": [
-    {
-      "files": ["*.blade.php"],
-      "options": {
-        "parser": "blade",
-        "tabWidth": 2
-      }
-    },
-    {
-      "files": ["*.php"],
-      "options": {
-        "parser": "php",
-        "tabWidth": 4
-      }
-    }
-  ],
-  "tabWidth": 2,
-  "printWidth": 1000,
-  "sortTailwindcssClasses": true
+    "plugins": ["@shufo/prettier-plugin-blade", "@prettier/plugin-php"],
+    "overrides": [
+        {
+            "files": ["*.blade.php"],
+            "options": {
+                "parser": "blade",
+                "tabWidth": 2
+            }
+        }
+    ],
+    "printWidth": 1000,
+    "sortTailwindcssClasses": true
 }
