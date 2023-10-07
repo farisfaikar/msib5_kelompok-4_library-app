@@ -6,6 +6,7 @@ use App\Models\Book;
 use App\Http\Requests\StoreBookRequest;
 use App\Http\Requests\UpdateBookRequest;
 use App\Models\Category;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
 class BookController extends Controller
@@ -90,17 +91,20 @@ class BookController extends Controller
         $book->category_uuid = $input["category_uuid"];
         $book->save();
 
-        return redirect()->route("book.index");
+        return redirect()->to($input["prev_url"]);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Book $book)
+    public function destroy(Request $request, Book $book)
     {
         $book = $this->book->find($book->uuid);
         $book->delete();
 
-        return redirect()->back();
+        $paginator = $this->book->paginate(10);
+        $redirectToPage = ($request->page <= $paginator->lastPage()) ? $request->page : $paginator->lastPage();
+
+        return redirect()->route("book.index", ["page" => $redirectToPage]);
     }
 }

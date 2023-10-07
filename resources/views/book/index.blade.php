@@ -64,6 +64,8 @@
                       @method('delete')
                       @csrf
 
+                      <input type="hidden" name="page" value="{{  $books->currentPage() }}">
+
                       <button type="submit" class="btn btn-error text-base-100">
                         Delete
                       </button>

@@ -8,6 +8,8 @@
         @method('put')
         @csrf
 
+        <input type="hidden" name="prev_url" value="{{  URL::previous() }}">
+        
         <div class="form-control w-full">
           <label class="label">
             <span class="label-text">Title</span>
