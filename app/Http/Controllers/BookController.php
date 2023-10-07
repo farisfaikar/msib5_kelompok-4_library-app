@@ -25,7 +25,7 @@ class BookController extends Controller
     public function index()
     {
         $title = "Readiverse | Books";
-        $books = $this->book->all();
+        $books = $this->book->paginate(10);
         return view("book.index", compact("title", "books"));
     }
 
@@ -101,6 +101,6 @@ class BookController extends Controller
         $book = $this->book->find($book->uuid);
         $book->delete();
 
-        return redirect()->route("book.index");
+        return redirect()->back();
     }
 }
