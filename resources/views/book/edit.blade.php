@@ -8,8 +8,8 @@
         @method('put')
         @csrf
 
-        <input type="hidden" name="prev_url" value="{{  URL::previous() }}">
-        
+        <input type="hidden" name="prev_url" value="{{ URL::previous() }}">
+
         <div class="form-control w-full">
           <label class="label">
             <span class="label-text">Title</span>
@@ -55,5 +55,6 @@
           <a href="{{ route('book.index') }}" class="btn btn-ghost mt-4 w-full md:ml-4 md:mt-2 md:w-24">Back</a>
         </div>
       </form>
-    </div </section>
-  @endsection
+    </div>
+  </section>
+@endsection

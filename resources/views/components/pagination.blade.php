@@ -30,11 +30,11 @@
         {{-- Previous Page Link --}}
         @if ($paginator->onFirstPage())
           <button aria-disabled="true" aria-label="{{ __('pagination.previous') }}" class="join-item btn btn-ghost btn-disabled">
-            <
+            &lt;
           </button>
         @else
           <a href="{{ $paginator->previousPageUrl() }}" rel="prev" class="join-item btn btn-ghost" aria-label="{{ __('pagination.previous') }}">
-            <
+            &lt;
           </a>
         @endif
 
@@ -46,11 +46,11 @@
         {{-- Next Page Link --}}
         @if ($paginator->hasMorePages())
           <a href="{{ $paginator->nextPageUrl() }}" rel="next" aria-label="{{ __('pagination.next') }}" class="join-item btn btn-ghost">
-            >
+            &gt;
           </a>
         @else
           <button aria-disabled="true" aria-label="{{ __('pagination.next') }}" class="join-item btn btn-ghost btn-disabled">
-            >
+            &gt;
           </button>
         @endif
 
